@@ -3,13 +3,11 @@ import { test, expect } from '@playwright/test';
 test('Adding coffee to cart using popup, should be added', async ({ page }) => {
   await page.goto('https://coffee-cart.netlify.app/');
   await expect(page).toHaveURL('https://coffee-cart.netlify.app/');
-  await page.locator('[data-test="Cappuccino"]').click({
-    button: 'right'
-  });
+  await page.locator('[data-test="Cappuccino"]').click({ button: 'right' });
   await expect(page.locator('[data-cy="add-to-cart-modal"]')).toBeVisible();
   await page.getByRole('button', { name: 'Yes' }).click();
   await page.locator('[data-test="checkout"]').hover();
-  await expect(page.locator('.list-item', { hasText: 'Cappuccino x 1'})).toBeVisible();
+  await expect(page.locator('.list-item', { hasText: 'Cappuccino x 1' })).toBeVisible();
 });
 
 test('Change quantity of added coffee via popup', async ({ page }) => {
