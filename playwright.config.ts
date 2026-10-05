@@ -64,6 +64,12 @@ export default defineConfig({
       // Unit-тести без браузера
       testDir: './tests',
       testMatch: ['voting-age.spec.js', 'voting age.spec.js'],
+    },
+    {
+      name: 'actions-practice',
+      // Тести з винесеними функціями дій у модуль page-actions
+      testDir: './tests/actions-practice',
+      use: { ...devices['Desktop Chrome'] },
     }
 
     // {
