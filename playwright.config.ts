@@ -52,6 +52,12 @@ export default defineConfig({
       // Указываем путь к тестам с XPath
       testDir: './tests/xpath-practice', 
       use: { ...devices['Desktop Chrome'] },
+    },
+    {
+      name: 'variables-homework',
+      // Тести з використанням змінних для локаторів
+      testDir: './tests/variables-homework', 
+      use: { ...devices['Desktop Chrome'] },
     }
 
     // {
