@@ -58,6 +58,12 @@ export default defineConfig({
       // Тести з використанням змінних для локаторів
       testDir: './tests/variables-homework', 
       use: { ...devices['Desktop Chrome'] },
+    },
+    {
+      name: 'unit-tests',
+      // Unit-тести без браузера
+      testDir: './tests',
+      testMatch: ['voting-age.spec.js', 'voting age.spec.js'],
     }
 
     // {
